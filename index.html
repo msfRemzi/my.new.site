@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ramzik</title>
+        <meta property="og:title" content="m4x3r">
+        <meta property="og:locale" content="en_EU">
+        <meta property="og:description" content="m4x3r's main page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/favico/icon.png" type="image/png">
+        <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
+        <link rel="stylesheet" href="assets/fonts/gothampro/style.css">
+        <link rel="stylesheet" href="assets/vars.css">
+        <link rel="stylesheet" href="assets/css/index/style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="assets/js/text.js"></script>
+        <script src="assets/js/typed.min.js"></script>
+        <meta name="theme-color" content="#C21CC7">
+        
+    </head>
+    <body class="center">
+        <script>
+                document.body.style.backgroundImage = "url('assets/anims/aye.gif')";
+        </script>
+        <div id="donate">
+            <div class="popup">
+                <h1>Donate</h1>
+                <p align="center">
+                    <h3><span class="font-size=larger">Отправляя донат, вы поддерживаете Ramzik'a и его проекты!</span></h3>                    
+                    <h2>Выберите способ доната</h2>
+                    <p align="center">
+						<input type="button" class="btn" value="DonationAlerts" onclick="location.href='https://www.donationalerts.com/r/msf_remzi'">
+                        <input type="button" class="btn" value="QIWI" onclick="location.href='https://qiwi.com/n/REMZI1201'">
+                    </p>
+                    <p align="center"><input class="btn" type="button" value="Закрыть" title="Закрыть" onclick="document.getElementById('donate').style.display='none';"></p>
+                </p>
+            </div>
+        </div>
+        <div id="gitlink">
+            <div class="popup">
+                <h1>Social Networks</h1>
+                <p align="center">
+                    <h3><span class="font-size=larger">Соц-Сети</span></h3>                    
+                    <h2>Выберите в какую соц-сеть хотите перейти</h2>
+                    <p align="center">
+                        <input type="button" class="btn" value="Discord" onclick="location.href='http://discordapp.com/users/Remzi#2212'">
+                        <input type="button" class="btn" value="Instagram" onclick="location.href='https://instagram.com/ramzik.pv?utm_medium=copy_link'">
+                        <input type="button" class="btn" value="Spotify" onclick="location.href='https://open.spotify.com/user/31env4u2jz3yadqe6kibl7xtpsxe?si=g3x7fVEhTvihX_YOCnNvPQ&utm_source=copy-link'">
+                        <input type="button" class="btn" value="Facebook" onclick="location.href='https://www.facebook.com/profile.php?id=100082682310952'">
+                    </p>
+                    <p align="center"><input class="btn" type="button" value="Закрыть" title="Закрыть" onclick="document.getElementById('gitlink').style.display='none';"></p>
+                </p>
+            </div>
+        </div>
+        <audio autoplay loop id="player">
+            <source src="assets/sounds/jealous.mp3">
+            <script>
+                document.currentScript.parentElement.volume = 0.80;
+            </script>
+        </audio>
+        <header class="center info">
+            <div class="center pizdec">
+                <div class="avatar-container"><img src="assets/images/AVA.VFX.jpg" oncontextmenu="return false;" class="avatar"></div>
+                <h2><span id="name"></span></h2>
+                <hr width="295">
+                <h3><span class="typed">aye</span><span class="typed-cursor">|</span></h3>
+                <hr width="295">
+                <h2>Links</h2>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="location.href='https://t.me/msfRemzi'">Telegram</a>
+                <a href="javascript://" class="link" onclick="location.href='https://t.me/RemziBio'">TG Сhannel</a>
+                <a href="javascript://" class="link" onclick="location.href='https://t.me/ReallFolowersBot'">Tg Bot</a>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="document.getElementById('gitlink').style.display='block'">Соц-Сети</a>
+            </div>
+            <div class="buttons">
+                <a href="javascript://" class="link" onclick="document.getElementById('donate').style.display='block'">Donate</a>
+            </div>
+        </header>
+    </body>
+    <script>
+        $("#name").text(getComputedStyle(document.body).getPropertyValue('--name'))
+        $("#description").text(getComputedStyle(document.body).getPropertyValue('--description'))
+        console.log('Пасхалка не работает идите нахуй')
+        if (getComputedStyle(document.body).getPropertyValue('--has-pasxalka-work') == "true") {
+            if(window.devtools.isOpen) { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); }
+            window.addEventListener('devtoolschange', event => { window.location.href = getComputedStyle(document.body).getPropertyValue('--pasxalka'); });
+        }
+    </script>
+</html>
